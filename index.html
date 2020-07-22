@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>Jimmy B. Kazadi's portfolio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <!-- Boostrap Stylesheet -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+   <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap" rel="stylesheet">
+   <link rel = "stylesheet" href = "/css_buttons/bootstrap-social.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+  body {
+    font: 20px Montserrat, sans-serif;
+    line-height: 1.8;
+    color: #f5f6f7;
+  }
+  p {font-size: 16px;}
+  .margin {margin-bottom: 45px;}
+  .bg-1 { 
+    background-image: url("Assets/macbook-336704_1920.jpg");
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center; 
+  }
+  .bg-2 { 
+    background-color: #474e5d; /* Dark Blue */
+    color: #ffffff;
+  }
+  .bg-3 { 
+    background-color: #ffffff; /* White */
+    color: #555555;
+  }
+  .bg-4 { 
+    background-color: #2f2f2f; /* Black Gray */
+    color: #fff;
+  }
+  .container-fluid {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+  .navbar {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 12px;
+    letter-spacing: 5px;
+  }
+  .navbar-nav  li a:hover {
+    color: #1abc9c !important;
+  }
+
+  .map-container{
+overflow:hidden;
+padding-bottom:26.25%;
+position:relative;
+height:0;
+}
+.map-container iframe{
+left:0;
+top:0;
+height:50%;
+width:100%;
+position:absolute;
+}
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <a class="navbar-brand" href="index.html" id="logo">Jimmy B. Kazadi</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+          aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+          <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+              <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="project.html">Project</a>
+              </li>
+              <li class="nav-ite">
+                  <a class="nav-link" href="resume.html">Résumé</a>
+              </li>
+          </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+
+<!-- First Container -->
+<div class="container-fluid bg-1 text-center" >
+  <h3 class="margin" >Who Am I?</h3>
+  <img src="Assets/Jimmy.png" class="img-responsive img-circle margin" style="display:inline" alt="Jimmy" width="350" height="350" >
+  <h3>I'm a Full Stack Software Developer</h3>
+</div>
+
+<!-- Second Container -->
+<div class="container-fluid bg-2 text-center">
+  <h3 class="margin">About Me</h3>
+  <p> My main objective is to use my knowledge and technical expertise throughout the software lifecycle to reassure the production and delivery of products and services compatible with customer requirements. With a competent software development team, and with solid and personal knowledge, skills and experience in software engineering, I am more than convinced that this goal can be achieved. My expertise as a junior software developer has increased my capabilities in software design, implementation, testing and upgrade. One of my goals is to stay abreast of the latest computer trends and technologies. I am convinced that if I am given the opportunity, I can be a useful talent for the company in order to help it achieve its goals </p>
+  <p>In my young career, I have developed front-end and back-end applications in Javascript, including development of technical specifications and coding documentation for new projects and implementing best coding practices to improve the efficiency of the project.
+    I have helped create a project plan and exit plan as well as Coordinated with Tester to test and debug software applications and I also have expertise working with HTML, CSS, Bootstrap, Nodejs, Express.js, MYSQL Workbench and so many others
+     </p>
+ 
+</div>
+
+<!-- Third Container (Grid) -->
+<div class="container-fluid bg-3 text-center">    
+  <h3 class="margin">Where To Find Me?</h3>
+  <!--Google map-->
+<div id="map-container-google-1" class="z-depth-1-half map-container" style="height: 500px">
+  <iframe src="https://maps.google.com/maps?q=atlanta&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
+    style="border:0" allowfullscreen></iframe>
+</div>
+</div>
+
+<!-- Footer -->
+<footer class="container-fluid bg-4 text-center">
+  
+  <p> <small class="text-white-50">© 2020. All Rights Reserved.</small></p> 
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>Jimmy B. Kazadi's Portfolio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <!-- Boostrap Stylesheet -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+   <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap" rel="stylesheet">
+   <link rel = "stylesheet" href = "/css_buttons/bootstrap-social.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+ 
+  p {font-size: 16px;}
+  .margin {margin-bottom: 45px;}
+ 
+  .bg-2 { 
+    background-color: #474e5d; /* Dark Blue */
+    color: #ffffff;
+  }
+  .bg-3 { 
+    background-color: #ffffff; /* White */
+    color: #555555;
+  }
+  .bg-4 { 
+    background-color: #2f2f2f; /* Black Gray */
+    color: #fff;
+  }
+  .container-fluid {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+  .navbar {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 12px;
+    letter-spacing: 5px;
+  }
+  .navbar-nav  li a:hover {
+    color: #1abc9c !important;
+  }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <a class="navbar-brand" href="index.html" id="logo">Jimmy B. Kazadi</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+          aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+          <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+              <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="project.html">Project</a>
+              </li>
+              <li class="nav-ite">
+                  <a class="nav-link" href="resume.html">Résumé</a>
+              </li>
+          </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+
+<!-- Second Container -->
+<div class="container-fluid bg-2 text-center">
+  <h3 class="margin">My Projects</h3>
+</div>
+<div class="container my-4">
+    <!--Grid row-->
+    <div class="row" id="my-projects">
+
+    </div>
+  </div>
+
+
+<!-- Footer -->
+<footer class="container-fluid bg-4 text-center">
+
+  <p> <small class="text-white-50">© 2020. All Rights Reserved.</small></p> 
+</footer>
+<script>
+  
+
+  var projects = [
+    {
+      title: 'Day Planner',
+      img:'Assets/day-planner.PNG',
+      deployed: 'https://binjim2002.github.io/gt-jquery-homework/',
+      repo: 'https://github.com/binjim2002/gt-jquery-homework'
+    },
+    {
+      title: 'Good Spirit',
+      img:'Assets/goodspiritsapp.PNG',
+      deployed:'https://elizaregas.github.io/Good-Spirits/',
+      repo: 'https://github.com/binjim2002/Good-Spirits'
+    },
+    {
+      title: 'Code Quiz',
+      img:'Assets/code-quiz.PNG',
+      deployed:'https://binjim2002.github.io/gt-code-quiz/.',
+      repo: 'https://github.com/binjim2002/gt-code-quiz'
+    },
+    {
+      title: 'Team Profile Generator',
+      img:'Assets/team-profile-generator-pix.PNG',
+      deployed: 'https://drive.google.com/file/d/1Bmpg1UDNRMb3ncYopIj9qFxrwED8pQO_/view',
+      repo: 'https://github.com/binjim2002/gt-team-profile-generator'
+    },
+    {
+      title: 'Note Taker',
+      img:'Assets/note-taker.PNG',
+      deployed:'https://blooming-meadow-23336.herokuapp.com/',
+      repo: 'https://github.com/binjim2002/express-notetaker'
+    },
+    {
+      title: 'Burger Handlebars',
+      img:'Assets/burgerz-handlebars.PNG',
+      deployed:'https://jimmyz-burgerz.herokuapp.com/',
+      repo: 'https://github.com/binjim2002/burger'
+    },
+    {
+      title: 'Employee Management System',
+      img:'Assets/employee-management-system-pix.PNG',
+      deployed:'https://drive.google.com/file/d/1SVmxYDJAzMY8A0gTevWcHzXh1ZIDGvO8/view',
+      repo: 'https://github.com/binjim2002/employee-management-system'
+    },
+    {
+      title: 'Work hard play hard',
+      img:'Assets/project2workhardplayhard.PNG',
+      deployed:'https://work-hard-play-hard.herokuapp.com/',
+      repo: 'https://github.com/Bcook131/gt-project-2'
+    }
+    
+
+  ];
+  var projectElement = document.getElementById('my-projects');
+  projects.forEach(project => {
+      var card = document.createElement('div');
+      card.className = "col-lg-4 col-md-6 mb-4";
+      card.innerHTML = generateCard(project);
+      projectElement.appendChild(card);
+  })
+  
+
+  function generateCard(data){
+    return `
+    
+        <h5 class="card-title">${data.title}</h5>
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="${data.img}" alt="Card image cap">
+            <div class="card-body">
+              <p class="card-text"></p>
+             
+              <a href="${data.deployed}"class="card-link">
+                <span class="fa fa-deployed" ></span> Deployed link
+              </a>
+              <a class="btn btn-block btn-social btn-github" href="${data.repo}" >
+                <span class="fa fa-github" ></span> Github repository
+              </a>
+            </div>
+        </div>
+     
+    `;
+  }
+</script>
+</body>
+</html>
